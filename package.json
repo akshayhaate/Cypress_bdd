@@ -1,0 +1,22 @@
+{
+  "name": "bdd_cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akshay Hate",
+  "license": "ISC",
+  "devDependencies": {
+    "cucumber": "^6.0.7",
+    "cypress": "^12.15.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "filterSpecs": true,
+    "omitFiltered": true
+
+   }
+}
