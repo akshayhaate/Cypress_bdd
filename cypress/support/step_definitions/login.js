@@ -1,17 +1,19 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps';
+//import LoginPage from '../support/page_objects/LoginPage';
+import loginPage from '../page_objects/loginPage';
 
 Given('I navigate to automation exercise website', () => {
-cy.visit('https://automationexercise.com/');
+    //LoginPage.visit();
+    loginPage.visit();
 });
 
 When('I enter login credentials', () => {
-cy.get('a[href="/login"]').click();
-cy.contains('Login to your account').should('be.visible');
-cy.get('input[data-qa="login-email"]').type('example1@test.com');
-cy.get('input[data-qa="login-password"]').type('foobar');
-cy.get('button[data-qa="login-button"]').click();
+    //LoginPage.enterLoginCredentials();
+    loginPage.enterLoginCredentials();
 });
 
 Then('I should be logged in', () => {
-cy.contains(' Logged in as ').should('be.visible');
+    //LoginPage.loggedInAs();
+    loginPage.loggedInAs();
+
 });

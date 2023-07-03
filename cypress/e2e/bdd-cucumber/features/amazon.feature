@@ -13,3 +13,4 @@ Scenario: Add product to cart
   And I select the first laptop from the search results
   And I add the laptop to the cart
   Then the laptop should be added to the cart
+  
